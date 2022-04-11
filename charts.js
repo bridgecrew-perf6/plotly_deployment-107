@@ -15,7 +15,9 @@ function init() {
 
     // Use the first sample from the list to build the initial plots
     var firstSample = sampleNames[0];
-    buildCharts(firstSample);
+    buildBarCharts(firstSample);
+    buildBubbleCharts(firstSample);
+    buildGaugeCharts(firstSample);
     buildMetadata(firstSample);
   });
 }
@@ -26,7 +28,9 @@ init();
 function optionChanged(newSample) {
   // Fetch new data each time a new sample is selected
   buildMetadata(newSample);
-  buildCharts(newSample);
+  buildBarCharts(newSample);
+  buildBubbleCharts(firstSample);
+  buildGaugeCharts(firstSample);
 
 }
 
@@ -125,7 +129,7 @@ function buildBubbleCharts(sample) {
 }
 
 // Create the buildChart function.
-function buildGuageCharts(sample) {
+function buildGaugeCharts(sample) {
   // Use d3.json to load the samples.json file 
   d3.json("samples.json").then((data) => {
     console.log(data);
