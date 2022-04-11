@@ -54,7 +54,7 @@ function buildMetadata(sample) {
 }
 
 // 1. Create the buildCharts function.
-function buildCharts(sample) {
+function buildBarCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
     // 3. Create a variable that holds the samples array. 
@@ -92,10 +92,10 @@ function buildCharts(sample) {
 
 // Bar and Bubble charts
 // Create the buildCharts function.
-function buildCharts(sample) {
+function buildBubbleCharts(sample) {
   // Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
-    
+
     // 1. Create the trace for the bubble chart.
     var bubbleData = [
       {
@@ -125,7 +125,7 @@ function buildCharts(sample) {
 }
 
 // Create the buildChart function.
-function buildCharts(sample) {
+function buildGuageCharts(sample) {
   // Use d3.json to load the samples.json file 
   d3.json("samples.json").then((data) => {
     console.log(data);
